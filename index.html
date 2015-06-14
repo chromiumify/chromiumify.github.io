@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+   <title>chromiumify - browserify for chrome packaged apps</title>
+  <meta http-equiv="Content-Type" content="text/html;" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Git, chrome packaged apps, browserify, node.js" />
+  <meta name="author" content="https://github.com/orgs/chromiumify/people" />
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- SCRIPTS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//platform.twitter.com/widgets.js" id="twitter-wjs" ></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="js/site.js"></script>
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/github-prettify-theme.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+  <section class="header">
+  	<div><img src="images/logo.png" alt="logo"></div>
+	  <div>
+	    <h3>Chromiumify</h3>
+	    <h3>is</h3>
+	    <h3>browserify for chrome apps</h3>
+	   </div>
+  </section>
+    <div class="navbar-spacer"></div>
+	  <nav class="navbar">
+		  <div class="container">
+		    <ul class="navbar-list">
+		      <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
+		      <li class="navbar-item"><a class="navbar-link" href="#install">Install</a></li>
+			  <!--<li class="navbar-item"><a class="navbar-link" href="#documentation">Documentation</a></li>-->
+	          <li class="navbar-item"><a class="navbar-link" href="#examples">Examples</a></li>
+		      <li class="navbar-item"><a class="navbar-link" href="#credits">Credits</a></li>
+		    </ul>
+		  </div>
+	  </nav>
+  <div class="docs-section" id="intro">
+	  	<h4>Intro</h4>
+	  	<p>
+	  		Take <a href="http://www.browserify.org">browserify</a> - A tool that enables <a href="https://www.nodejs.org">node.js</a> style <code>require('')</code> in the browser.
+	  	</p>
+	  	<p>
+	  		Mix it with <a href="https://developer.chrome.com/apps/about_apps">Chrome Apps</a> - A way to build native applications using HTML5 JS and CSS technologies.
+	  	</p>
+	  	<p>
+	  		Sprinkle in some <a href="https://github.com/chromiumify/project-list">wonderful open source libraries</a> 
+	  	</p>
+
+	  	<p>
+	  		And you have a compelling platform to deliver robust solutions that put offline and performance as a first tier requirement.  
+	  	</p>
+  </div>
+  <div class="docs-section" id="install">
+  	<h4>Install</h4>
+  	First install <a href="https://www.nodejs.org">node.js</a> which also installs npm
+	<p><div>
+	  	<h5><code>npm install chromiumify -g</code></h5> 
+	  </div>
+	  </p>
+  </div>
+  <div class="docs-section" id="examples">
+  	<h4>Example 1 - Generating a Project</h4>
+  	<p>
+  	This section will show you the basics of using chromiumify.
+  	We will create a small chrome app and run a HTTP server from it. 
+  	The code we will use is <a href="">available in the repo</a> but you shouldn't need to refer to it.
+  	</p>
+
+  	<p>
+  		First lets create a chrome app project. 
+  		At the command prompt run the following commands.
+		<div>
+	  		<h5><code>mkdir demoapp</code></h5> 
+	  	</div>
+	  	<div>
+	  		<h5><code>cd demoapp</code></h5> 
+	  	</div>
+		<div>
+	  		<h5><code>chromiumify gen .</code></h5> 
+	  	</div>
+	This will create a three files in your project folder
+		<ol>
+			<li>manifest.json - The descriptor for the project specifies the name and the js file to run</li>
+			<li>index.html - The web page that is displayed when the app runs</li>
+			<li>background.js - The script that is ran when the app is intialised.</li>
+		</ol>
+  </p>
+
+	 <p> Now we should be able to run the application.
+	    <div>
+	  		<h5><code>chromiumify run .</code></h5> 
+	  	</div>
+	  	N.B. the <code>.</code> means the current directory in the above commands.  	 	
+	 </p>
+	 <p>Your application should now look like this</p>
+	 <img src="images/example1-screen.png" />
+  </div>
+  <div class="docs-section" id="credits">
+  <h4>Credits</h4>
+  <table class="u-full-width">
+	<tbody>
+		<tr><th align="left">Feross Aboukhadijeh</th><td><a href="https://github.com/feross">GitHub/feross</a></td>
+		<td><a href="https://twitter.com/feross">Twitter/@feross</a></td></tr>
+		<tr><th align="left">Jan Schär</th><td><a href="https://github.com/jscissr">GitHub/jscissr</a></td><td><a href="https://twitter.com/jscissr">Twitter/@jscissr</a></td></tr>
+		<tr><th align="left">Michał Sobkiewicz</th><td><a href="https://github.com/perceptron8">GitHub/perceptron8</a></td><td><a href="https://twitter.com/perceptron8">Twitter/@perceptron8</a></td></tr>
+		<tr><th align="left">James Halliday</th><td><a href="https://github.com/substack">GitHub/substack</a></td><td><a href="https://twitter.com/substack">Twitter/@substack</a></td></tr>
+		<tr><th align="left">Anton Whalley</th><td><a href="https://github.com/no9">GitHub/no9</a></td><td><a href="https://twitter.com/dhigit9">Twitter/@dhigit9</a></td></tr>
+	</tbody>
+  </table>
+	    <p>
+	    	Like chromiumify and want to tweet it, share it, or star it? We appreciate that &lt;3 
+	    </p>
+	      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.chromiumify.org" data-text="chromiumify - browserify for chrome apps." data-via="chromiumify" data-related="chromiumify">Tweet</a>
+	      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	   
+	      <iframe src="http://ghbtns.com/github-btn.html?user=chromiumify&repo=chromiumify&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+	      <iframe src="http://ghbtns.com/github-btn.html?user=chromiumify&repo=chromiumify&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+		</p>
+	</div>
+  </div>
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
